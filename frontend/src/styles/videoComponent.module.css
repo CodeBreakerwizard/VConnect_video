@@ -1,0 +1,256 @@
+.meetVideoContainer {
+    position: relative;
+    height: 100vh;
+    background: rgb(1, 4, 48);
+}
+
+.meetUserVideo {
+    position: absolute;
+    bottom: 10vh;
+    height: 20vh;
+    width: auto;
+    left: 0;
+    border-radius: 20px;
+}
+
+.buttonContainers {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+}
+
+.buttonContainers svg {
+    font-size: 3rem;
+}
+
+.conferenceView { 
+
+    display: flex;
+    
+    padding: 10px;
+    gap: 10px;
+}
+
+.conferenceView  video {
+    width: 40vw;
+    height: 20vh;
+    min-width: 30vw;
+    border-radius: 10px;
+}
+
+.chatRoom {
+    position: absolute;
+    height: 90vh;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    width: 30vw;
+    padding-inline: 20px;
+}
+
+.chatContainer {
+    position: relative;
+    height: 100%;
+}
+
+
+.chattingArea {
+    position: absolute;
+    bottom: 0;
+}
+
+/* ===== Lobby screen ("Enter into Lobby") ===== */
+
+.lobbyPageContainer {
+    min-height: 100vh;
+    width: 100%;
+    background:
+        radial-gradient(60% 50% at 82% 10%, rgba(109, 93, 252, 0.16), transparent 60%),
+        radial-gradient(45% 40% at 15% 85%, rgba(168, 85, 247, 0.10), transparent 60%),
+        #0a0e1a;
+    color: #f5f6fa;
+    font-family: "Inter", sans-serif;
+}
+
+.lobbyNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lobbyBrand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.lobbyBrand h2 {
+    font-family: "Sora", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.lobbyLogoMark {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6d5dfc, #a855f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lobbyBackHome {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.85rem;
+    color: #cbd2e0;
+    cursor: pointer;
+}
+
+.lobbyBackHome:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.lobbyContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    align-items: flex-start;
+}
+
+.lobbyWelcomeCard,
+.lobbyJoinCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 18px;
+    padding: 1.8rem;
+}
+
+.lobbyWelcomeCard {
+    flex: 1 1 300px;
+}
+
+.lobbyJoinCard {
+    flex: 1.4 1 420px;
+}
+
+.lobbyWelcomeCard h2,
+.lobbyJoinCard h2 {
+    font-family: "Sora", sans-serif;
+    font-size: 1.5rem;
+    margin: 0 0 0.4rem 0;
+}
+
+.lobbySubtext {
+    color: #9aa3b8;
+    font-size: 0.92rem;
+    margin: 0 0 1.4rem 0;
+}
+
+.lobbyFeatureList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.lobbyFeatureList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.lobbyFeatureIcon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lobbyFeatureTitle {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.lobbyFeatureSub {
+    margin: 0;
+    color: #9aa3b8;
+    font-size: 0.8rem;
+}
+
+.lobbyPreviewWrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #05070d;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 1.4rem;
+}
+
+.lobbyPreviewVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.lobbyInputRow {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    margin-bottom: 1.6rem;
+}
+
+.lobbyTipsHeading {
+    font-size: 0.85rem;
+    color: #9aa3b8;
+    text-align: center;
+    margin-bottom: 0.9rem;
+}
+
+.lobbyTipsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 1.4rem;
+}
+
+.lobbyTipCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 0.8rem;
+}
+
+.lobbyPrivacyNote {
+    text-align: center;
+    color: #9aa3b8;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .lobbyInputRow {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,376 @@
+/* ===== Design tokens ===== */
+:root {
+  --bg-deep: #05070d;
+  --bg-navy: #0a0e1a;
+  --bg-navy-soft: #0d1220;
+  --panel: rgba(255, 255, 255, 0.035);
+  --panel-border: rgba(255, 255, 255, 0.09);
+  --text-primary: #f5f6fa;
+  --text-secondary: #9aa3b8;
+  --accent-1: #6d5dfc;
+  --accent-2: #a855f7;
+  --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  --danger: #ef4444;
+  --success: #22c55e;
+  --font-display: "Sora", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* ===== Landing page ===== */
+.landingPageContainer {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(60% 50% at 82% 10%, rgba(109, 93, 252, 0.16), transparent 60%),
+    radial-gradient(45% 40% at 15% 85%, rgba(168, 85, 247, 0.10), transparent 60%),
+    var(--bg-navy);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+.landingPageContainer nav {
+  padding-inline: 3rem;
+  padding-block: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.landingPageContainer nav h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.brandAccent {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.landingPageContainer nav .navlist p:hover {
+  color: var(--text-primary);
+}
+
+.navCta {
+  background: var(--accent-gradient);
+  color: white !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ---- Hero ---- */
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 4.5rem 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.heroLeft {
+  flex: 1 1 460px;
+  max-width: 560px;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.6rem;
+}
+
+.heroLeft h1 {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.2rem 0;
+}
+
+.gradientText {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 460px;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.6rem;
+  flex-wrap: wrap;
+}
+
+.primaryCta {
+  background: var(--accent-gradient);
+  border-radius: 12px;
+  padding: 0.95rem 1.6rem;
+  box-shadow: 0 10px 30px -8px rgba(109, 93, 252, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.primaryCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -8px rgba(109, 93, 252, 0.7);
+}
+
+.primaryCta a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.secondaryCta {
+  padding: 0.95rem 1.6rem;
+  border-radius: 12px;
+  border: 1px solid var(--panel-border);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.15s ease;
+}
+
+.secondaryCta:hover {
+  background: var(--panel);
+}
+
+.featureRow {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.featureChip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  min-width: 150px;
+}
+
+.featureChip .chipTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+}
+
+.featureChip .chipSub {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+/* ---- Hero mockup (right side) ---- */
+.heroRight {
+  flex: 1 1 380px;
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.callCard {
+  width: 250px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, #12172a, #0b0f1c);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  position: absolute;
+}
+
+.callCard.cardBack {
+  transform: rotate(6deg) translate(58px, 34px);
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.callCard.cardFront {
+  transform: rotate(-6deg) translate(-58px, -10px);
+  z-index: 2;
+}
+
+.callTopBar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  padding: 0.2rem 0.4rem 0.6rem;
+}
+
+.callAvatarWrap {
+  position: relative;
+  height: 220px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(109, 93, 252, 0.35), rgba(168, 85, 247, 0.25));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.callAvatarCircle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.callPip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, #2a2f45, #1a1e30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.callControls {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  padding-top: 0.7rem;
+}
+
+.callBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.callBtn.endBtn {
+  background: var(--danger);
+}
+
+@media (max-width: 900px) {
+  .landingMainContainer {
+    padding: 3rem 1.5rem;
+  }
+  .heroLeft h1 {
+    font-size: 2.4rem;
+  }
+  .heroRight {
+    min-height: 340px;
+  }
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  text-align: center;
+
+}
+.meetContainer {
+  display: flex;
+  padding-inline: 20px;
+  height: 80vh;
+  gap: 10vw;
+  justify-content: center;
+}
+
+
+
+.leftPanel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.rightPanel {
+  display: flex;
+  align-items: center;
+}
+
+.rightPanel > img {
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+}

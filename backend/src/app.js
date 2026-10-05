@@ -19,10 +19,13 @@ const io = connectToSocket(server);
 
 app.set("port", (process.env.PORT || 8000))
 app.use(cors({
-    origin: true,
+    origin: "https://vconnect-video-g7rw32rg-job-tracker12.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+app.options("*", cors());
+
 app.use(express.json({ limit: "40kb" }));
 app.use(express.urlencoded({ limit: "40kb", extended: true }));
 
